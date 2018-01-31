@@ -13,4 +13,13 @@ RUN packages="python3-rpi.gpio findutils coreutils zip software-properties-commo
     || apt-get -y install $packages \
     || apt-get -y install $packages
 
+# Set our working directory
+WORKDIR /usr/src/app
+
+# This will copy all files in our root to the working  directory in the container
+COPY . ./
+
+# switch on systemd init system in container
+ENV INITSYSTEM on
+
 CMD python3 run-fan.py
