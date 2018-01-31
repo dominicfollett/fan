@@ -6,7 +6,7 @@ import signal
 import sys
 import RPi.GPIO as GPIO
 pin = 18 # The pin ID, edit here to change it
-maxTMP = 45 # The maximum temperature in Celsius after which we trigger the fan
+maxTMP = 70 # The maximum temperature in Celsius after which we trigger the fan
 
 def setup():
     GPIO.setmode(GPIO.BCM)
