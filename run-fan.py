@@ -14,7 +14,7 @@ def setup():
     return()
 def getCPUtemperature():
     res = os.popen('vcgencmd measure_temp').readline()
-    temp =(res.replace("temp=","").replace("’C\n",""))
+    temp =(res.replace("temp=","").replace("C\n",""))
     #print(“temp is {0}”.format(temp)) #Uncomment here for testing
     return temp
 def fanON():
